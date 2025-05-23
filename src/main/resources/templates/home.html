@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base:: layout(~{::section})">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="intro" id="landing">
+            <h5 id="maintext" class="center-content" style="color: whitesmoke;">My name is
+                <span>
+                    <h1 style="color: aliceblue;"><br><br> <b>Nitish Kumar </b>
+                    </h1>
+                </span>
+                <span><h6 id="maintext" class="center mt-5" style="font-weight: lighter; color: rgb(204, 204, 204);">
+                    <br>Aspiring Java Developer</h6></span>
+            </h5>
+        </div>
+        <div class="center-content" id="landing2">
+            <div class="content">
+                <div class="con-text">
+                    <h1>Welcome to my portfolio</h1>
+                    <p>Let me introduce myself.</p>
+                    <div>
+                        <button class="btn">
+                            <a th:href="@{/about}">Let's Explore</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
