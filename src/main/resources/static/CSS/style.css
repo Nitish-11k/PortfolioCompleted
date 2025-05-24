@@ -47,23 +47,39 @@ body {
 .center-content {
     color: rgb(213, 145, 43);
     text-align: center;
-    margin: 2px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    height: 100vh;
+    margin-top: 20px;
+    height: auto;
 }
 #maintext{
     margin: -10vh auto;
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    gap: 30px;
+    text-align: center;
+    padding: 20px;
 }
 
 #intro{
     margin-top: 50px;
+    height: 100vh;
+    width: auto;
+}
+#maintext2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30vh;
+    text-align: center;
+    text-decoration: wavy;
+    color: #fff;
 }
 
 #landing{
     height: 100vh;
-    width: 100%;
+    width: auto;
     background-image: url("https://user-images.githubusercontent.com/26179770/37276818-e3e358f4-2608-11e8-9659-05585e92a588.png");
     background-position: center;
     margin-top: 10vh;
@@ -72,32 +88,24 @@ body {
     background-attachment: fixed;
     z-index: -1;
 }
-#landing2{
-    height: 100vh;
-    background-image: url("https://th.bing.com/th/id/OIP.C6erhZ-1EcYs7V7WGrPzmAHaDy?rs=1&pid=ImgDetMain");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    z-index: -1;
-}
 
 .content {
     height: auto;
-    margin-top: 30px auto;
-    padding: 20px;
-    background: linear-gradient(0, rgb(220, 215, 215), black);
+    /* margin-top: 30px auto; */
+    padding: 25px;
+    background: linear-gradient(0, rgb(118, 101, 101), black);
     border-radius: 40px;
-    width: 100vh;
+    justify-content: center;
+    /* width: 100vh; */
     box-shadow:
-        30px 20px 10px rgba(255, 255, 255, 0.3),
+        30px 20px 10px rgba(178, 136, 136, 0.3),
         /* left shadow */
         0 5px 10px rgba(255, 255, 255, 0.3);
 
 }
 
 .content p {
-    color: rgb(9, 9, 9);
+    color: white;
     text-align: center;
     height: auto;
     padding: 10px;
@@ -105,12 +113,13 @@ body {
 }
 
 .con-text-2 {
-    margin: -35px;
-    width: 96vw;
+   
+    width: 100vw;
     height: auto;
     
 
 }
+
 
 .btn {
     background-color: rgb(49, 128, 218);
@@ -126,18 +135,19 @@ body {
 
 .content-1 {
     height: 100vh;
-    margin-top: 30vh;
-    padding: 20px;
+    margin-top: 20vh;
+    /* padding: 20px; */
     /* background: linear-gradient(0, rgb(220, 215, 215), black); */
     border-radius: 40px;
     width: auto;
+    margin-bottom: 6vh;
     /* box-shadow: 
     
         30px 20px 10px rgba(255, 255, 255, 0.3),
        
         0 5px 10px rgba(255, 255, 255, 0.3);
         */
-
+    
 }
 
 .con-text-2 p {
@@ -145,7 +155,7 @@ body {
     text-align: center;
     width: auto;
     height: auto;
-    padding: 30px;
+    padding: 11px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -164,13 +174,14 @@ body {
     margin-top: 40px;
 }
 #contact-details{
-    height: 100vh;
+    height: auto;
     background-image: url("https://www.pngmart.com/files/23/Black-Background-PNG-Isolated-HD.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: -1;
+    margin-top: 60px;
 }
 .link-contact{
     color: white;
@@ -181,14 +192,32 @@ body {
 
 /* ================================================================================= */
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 cards per row */
-  grid-template-rows: auto auto; /* Two rows */
-  gap: 40px;
-  justify-items: center;
-  align-items: center;
-  padding: 50px;
-  margin-top: 60px;
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  /* padding: 2rem; */
+
+  margin-top: 20vh;
+}
+@media (max-width: 600px) {
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+  }
+  .flip-card:hover{
+    width: 260px;
+    height: 310px;
+    transform: scale(1.1);
+    margin: 30px;
+}
+
 }
 
 .flip-card {
@@ -196,6 +225,13 @@ body {
   width: 240px;
   height: 300px;
   perspective: 1000px;
+  transition: transform 0.5s ease-in-out;
+}
+.flip-card:hover{
+    width: 260px;
+    height: 310px;
+    transform: scale(1.1);
+   
 }
 
 .flip-card-inner {
@@ -235,7 +271,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  word-wrap: break-word;
 }
 
 /* ================================================================================= */
